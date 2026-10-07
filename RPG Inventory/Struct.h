@@ -31,3 +31,11 @@ struct Item
 		damage = newDamage;
 	}
 };
+
+struct Weapon
+{
+	string name;
+	int price;
+	int damage;
+	bool isOwned = false;
+};

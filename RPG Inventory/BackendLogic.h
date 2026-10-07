@@ -11,7 +11,7 @@ inline void noItemSelected()
 {
 	clear();
 	cout << "[!] No Item Selected" << endl;
-	cout << "Select an item from the shop first." << endl;
+	cout << "Select an item from the shop first."  << endl;
 	pause();
 }
 
@@ -34,5 +34,4 @@ inline void printInfo(const Player* player, const Item* current)
 	
 	if (current == nullptr) cout << "Current Weapon: None" << endl;
 	else cout << "Current Weapon: " << current->name << endl;
-	space();
 }

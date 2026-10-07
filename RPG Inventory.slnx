@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="RPG Inventory/RPG Inventory.vcxproj" />
+  <Project Path="RPG Inventory/RPG Inventory.vcxproj" Id="d563af71-f7cf-4ec5-b172-260b9cf6e53c" />
 </Solution>

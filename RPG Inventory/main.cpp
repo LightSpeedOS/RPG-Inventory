@@ -8,8 +8,8 @@ using namespace std;
 
 auto main() -> int
 {
-	Player player("Jamaal", 500);
-	vector<
+	Player player("Jamaal", 2000);
+	vector<Weapon> weapons;
 	vector<Item> items;
 	setUpItems(items);
 
@@ -35,15 +35,15 @@ auto main() -> int
 		switch (mainOption)
 		{
 		case BrowseShop:
-
+			browseShop(items, currentWeapon, &player);
 			break;
 
 		case BuyItem:
-
+			buyItem(items, currentWeapon, &player);
 			break;
 
 		case SellItem:
-
+			sellItem(items, currentWeapon, &player);
 			break;
 
 		case Inventory:
@@ -51,7 +51,7 @@ auto main() -> int
 			break;
 
 		case Exit:
-
+			shutDown();
 			break;
 		}
 	}

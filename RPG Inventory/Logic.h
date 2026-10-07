@@ -1,6 +1,8 @@
 #pragma once
 
-inline void listShop(vector<Item> items, Item* current)
+#include "Weapon.h"
+
+inline void listShop(const vector<Item> items, Item* current)
 {
 	clear();
 
@@ -22,7 +24,7 @@ inline void listShop(vector<Item> items, Item* current)
 
 }
 
-inline void browseShop(vector<Item> items, Item* current)
+inline void browseShop(vector<Item>& items, Item*& current, Player* player)
 {
 
 	listShop(items, current);
@@ -35,15 +37,20 @@ inline void browseShop(vector<Item> items, Item* current)
 	switch (tolower(key))
 	{
 	case '1':
-
+		buyItem(items, current, player);
 		break;
 
 	case '2':
-
+		sellItem(items, current, player);
 		break;
 
 	case 'r':
 
+		return;
+
+	default:
+		invalid();
+		while (_kbhit()) _getch();
 		break;
 	}
 }
